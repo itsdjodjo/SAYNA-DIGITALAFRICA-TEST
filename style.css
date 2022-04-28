@@ -1,0 +1,519 @@
+@font-face {
+    font-family: 'far_from_homecomingregular';
+    src: url('Assets/font/far-from_homecoming_updated-webfont.woff2') format('woff2'),
+         url('Assets/font/far-from_homecoming_updated-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+/* Maintenant je peux utilisewr la font homecoming */
+}
+
+body{
+    /* Pour mettre tous les texte en blanc car ils vont herite de body */
+    color: #ffffff;
+    margin: 0;
+    position: relative;
+}
+p{
+    font-size: 14px;
+    font-family: 'Montserrat';
+}
+
+/*************** Partie de la nav ***************/
+
+header{
+    background-color: #B11313;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 75px;
+}
+
+#headerlogo{
+    /* Diminuer la taille du div */
+    padding-left: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#headerliens{
+    /* Pour centrer les liens */
+    margin-top: 40px;
+    margin-right: 150px;
+}
+
+#headerliens a{
+    /* je vais rendre les liens de l'entête en couleur blanc et emlever l'underline */
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 50px;
+
+}
+
+img{
+    /* Pour rendre les images responsive */
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/******************** Passons a la section *********************/
+/* Premiere section, c-a-d les spidermans ainsi que le gros titre */
+h1, .homecoming{
+    font-family: 'far_from_homecomingregular';
+    text-transform: uppercase;
+}
+
+.spiderman{
+    background-color: #B11313;
+    padding-bottom: 100px;
+}
+
+.spiderimg{
+    /* j'ai mis la hauteur a 805px pour que la div='spider'
+    ne remonte pas  */
+    height: 805px;
+}
+
+.spidertitle{
+    /* Pour mettre le titre a cote de Spiderman */
+    margin-top: -600px;
+}
+
+h1{
+    /* j'arrange le titre por qu'il soit plus grand et aligner a cote
+    de la main de spiderman */
+    font-size: 64px;
+    font-weight: normal;
+    margin-bottom: 100px;
+}
+
+/* Aligner sur la gauche le titre et les acteurs */
+.spider, .font-montserrat, h1{
+    padding-left: 100px;
+}
+#buttonalign{ /* j'utilise margin-left pour le bouton pour l'aligner car son bg est d'une autre couleur */
+    margin-left: 100px;
+}
+
+/* mettre du style sur les boutons */
+.button{
+    background-color: #ffffff;
+    color: #B11313;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px 30px 10px 30px; /*utiliser padding pour augmenter la taille de la boite des liens*/
+}
+
+.button2{
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 10px 30px 10px 30px;
+}
+
+.font-montserrat{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* second part, les spidermans */
+.homecoming{
+    font-weight: normal;
+    font-size: 32px;
+}
+
+#lesActeurs{
+    /* j'utilise flexbox pour aligner les portraits */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 80px;
+    align-items: center;
+}
+
+.acteur{
+    width: 306px;
+    height: auto;
+    text-align: justify;
+/* je met la largeur de la boite egale a la largeur du portrait
+pour qu'ils soient bien justifie */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ici j'arrange la position de la liste */
+#holland ul{
+    margin-top: -5px;
+    margin-bottom: 2px;
+    padding-left: 30px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+#holland li{
+    list-style-type: disc;
+}
+
+#holland p{
+    margin: 0px 0px 0px 0px;
+}
+
+#holland a{
+    margin-top: 20px;
+}
+
+/**************   LE FORMULAIRE POUR LR COSTUME ***************************/
+/* le BG du formulaire avec l'image */
+#becomehero{
+    background-color: #114C92;
+    /* j'utilise GRID pour positionner l'img et le formulaire */
+    display: grid;
+    grid-template-columns: 50% 40%;
+}
+
+#becomehero form{
+    /* Je donne le nbre de colonne et de rangee ainsi que leur taille */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  80px 50px 50px 50px 50px 50px 50px 50px;
+}
+
+#becomehero form h2, #becomehero form p{
+    /* centre les items */
+    justify-self: center;
+}
+
+#becomehero form input{
+    height: 35px;
+    width: 380px;
+    justify-self: center;
+}
+
+/* Passons au style du formulaire ainsi que le bouton d'envoie */
+
+#becomehero form input{
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    padding: 1px 4px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+#becomehero input[type="submit"]{
+    width: 170px;
+    height: 55px;
+    background-color: #114C92;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+
+/**************** LE FORMULAIRE POUR L'INSCRIPTION *******************/
+/* BG de l'inscription */
+#signup{
+    background-color: #B11313;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-left: 100px;
+}
+
+.signupform h2{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.signupform p{
+    margin-bottom: 40px;
+}
+
+.signupform form{
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 50px 50px 80px 80px;
+}
+
+#signup .grille{
+    width: 300px;
+    height: 30px;
+    color: #ffffff;
+    background-color: #B11313;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 1px 10px;
+}
+
+#conteneur a{
+    color: #ffffff;
+}
+
+#conteneur{
+    margin-left: 10px;
+}
+
+label{
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+.signupform button{
+    width: 230px;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    justify-self: center;
+    cursor: pointer;
+    color: #B11313;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/********************** LE PIED DE PAGE *********************/
+
+footer{
+    background-color: #000000;
+    height: 300px;
+}
+
+.liens{
+    
+    padding: 50px 0px;
+    margin-bottom: 20px;
+}
+
+.liens a{
+    text-decoration: none;
+    color: #ffffff;
+    /* Pour espacer les liens */
+    margin-left: 50px;
+}
+
+#firstLogo{
+    margin-left: 50px;
+}
+
+select{
+    margin-left: 50px;
+    width: 150px;
+    background-color: #B11313;
+    border-radius: 10px;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+#reseaux{
+    /* Faire en sorte que les liens des reseaux sociaux soit comme il faut */
+    color: #B11313;
+}
+/* .liens_reseaux img{
+    width: 100px;
+    min-height: 100px;
+} */
+#reseaux a{
+    width: auto;
+    min-height: auto;
+    background-color: #B11313;
+    text-decoration: none;
+    padding: 15px 10px 10px 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+#reseaux{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.liensreseaux{
+    margin-left: 40%;
+}
+
+audio{
+    height: 40px;
+}
+
+/* NOUS ALLONS RENDRE LE PAGE RESPONSIVE POUR LES MOBILES */
+
+@media screen and (max-width: 600px) {
+
+    p{
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    .homecoming{
+        font-size: 26px;
+    }
+
+    /***************** HEADER *******************/
+    #headerlogo{
+        /* je met les 3 logos en absolute pour qu'ils ne soient pas supprime avec les liens
+        de la nav */
+        position: absolute;
+        width: 200px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        padding-left: 50px;
+        top: 10px;
+        left: 0;
+    }
+
+    #headerlogo img{
+        margin-right: 10px;
+    }
+
+    header{
+        /* je fais disparaitre le div header */
+        height: 0;
+    }
+
+    #herderlogo img{
+        max-width: 100%;
+    }
+
+    .petitlogo{
+        height: 18px;
+    }
+    /***************** SECTION *********************/
+
+    /****** PARTIE SPIDERMAN ******/
+
+    /*** 1er Partie: SPIDERIMG ***/
+    .spiderimg{
+        height: 400px;
+    }
+    .spidertitle{
+        position: relative;
+        margin-top: -150px;
+    }
+    h1{
+        font-size: 38px;
+        font-weight: lighter;
+        margin-top: 0;
+        margin-bottom: 50px;
+        padding-left: 50px;
+    }
+    .spidertitle h2{
+        position: absolute;
+        top: 50px;
+        padding-left: 50px;
+        font-size: 16px;
+    }
+    #buttonalign{
+        margin-left: 50px;
+    }
+    .button2{
+        margin-left: 10px;
+    }
+
+    /*** 2em Partie: SPIDER ***/
+
+    #lesActeurs{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .acteur{
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .spider{
+        padding-left: 30px;
+    }
+    .spiderman{
+        padding-bottom: 50px;
+    }
+
+    #holland ul{
+        font-size: 12px;
+        margin: 0;
+    }
+    
+    /****** PARTIE BECOMEHERO ******/
+    #becomehero{
+        display: block;
+        height: 500px;
+        position: relative;
+    }
+
+    #becomehero img{
+        /* Pour que l'image soit en-dessous */
+        z-index: 1;
+    }
+
+    #becomehero form{
+        z-index: 10;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+    }
+    
+    #becomehero form input{
+        height: 25px;
+    }
+
+    #becomehero input[type="submit"] {
+        opacity: calc(0.6);
+    }
+
+    /****** PARTIE SIGNUP ******/
+    #signup{
+        padding-left: 50px;
+        display: block;
+        margin-top: 0px;
+        text-align: center;
+        height: 500px;
+    }
+
+    #signup h2{
+        margin-top: 0px;
+        padding-top: 50px;
+        padding-right: 10px;
+        font-size: 20px;
+    }
+
+    .signupform{
+        z-index: 2000;
+    }
+
+    #signup img{
+        z-index: 1;
+        float: right;
+        width: 250px;
+        margin: -150px -20px 0px 0px;
+    }
+
+    #conteneur{
+        font-size: 12px;
+        width: 250px;
+        text-align: justify;
+    }
+    #conteneur input{
+        width: 20px;
+        height: 20px;
+    }
+
+    /*********************** FOOTER *********************/
+
+    footer{
+        position: relative;
+    }
+
+    .liens a{
+        float: left;
+    }
+    /* Franchement j'ai aucune idee de comment faire pour:
+    -mettre tous les liens en left
+    -mettre le bouton select en right
+    -mettre les 3 logos en center */
+}
